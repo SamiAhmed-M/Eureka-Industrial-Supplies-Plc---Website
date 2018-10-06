@@ -1,0 +1,4 @@
+AuthName "/home/eurekachemicals/public_html/eurekastock/"
+AuthUserFile "/home/eurekachemicals/.htpasswds/public_html/eurekastock/passwd"
+AuthType Basic
+require valid-user

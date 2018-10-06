@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^euorika\.encauditing\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.euorika\.encauditing\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "http\:\/\/eureka\-chemicals\.com" [R=301,L]
+

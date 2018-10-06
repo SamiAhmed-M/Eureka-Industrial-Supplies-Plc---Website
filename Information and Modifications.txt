@@ -1,0 +1,43 @@
+This dynamic website is designed for a chemical company:
+-displays company information
+-Display company contact detail
+-Enablses users to create their account
+-Enables users,managers and administrators to recover forgotten password
+-Enables users to manager their profile
+-Enables users to view company product photos
+-Enables users to view enlarged images of the products in their interest
+-Enables users to view company news/information
+-Enables users to send feedback to the company
+-Enables administrators to register managers
+-Enables managers/administrators to manage their profile
+-Enables managers/administrators to view registered users of the company website
+-Enables managers/administrators to upload and manage images of company products
+-Enables managers/administrators to post and manage news / information about company products
+-Enables managers/administrators to see users feedbacks
+1.Here the http://localhost/User/CompanyProducts.php page has two columns to
+  show the product detail to user i.e. just the description and the photo of 
+  the products rather than the four columns specifying the file name and file
+  size in the previous version. 
+
+  This will give the user clear view of the details and the photo.
+
+2.Logo Changed
+3.OurProducts.php created in localhost directory to give brief overview of 
+  the company's products 
+4.Index.php photo descriptions changed as per the client's request
+5.All main.css file reprogrammed in order to enlarge the width of the page
+  and also clear demarkations have been made on the issues of security boundary
+  between the manager and the administrator i.e. on the previous versions 
+  editing / deleting images or editing / deleting news on the manager
+  account access will revert the page to administrator access. 
+6.Remove the following code from every page because codes outside html will 
+  hinder the page from being displayed on remote server
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+7.Change all the mysql codes into mysqli because it is deprecated
+8.Amend the database connection attributes like the localhost, username, password and database name
+  Replace:
+	$con = mysqli_connect("localhost", "root", "", "chemicals");
+  With:
+	$con = mysqli_connect("localhost", "encaudit", "fGtG@2016", "encaudit_chemicals");
+9.Addition of service picture gallery
